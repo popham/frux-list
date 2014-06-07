@@ -2,7 +2,7 @@
   "name": "frux-list",
   "version": "0.0.0",
   "description": "Functional reactive lists styled to substitute into React's Flux architecture.",
-  "main": "Store.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/popham/frux-list/issues"
   },
-  "homepage": "https://github.com/popham/frux-list"
+  "homepage": "https://github.com/popham/frux-list",
+  "dependencies": {
+    "baconjs": "^0.7.14"
+  }
 }
