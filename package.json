@@ -4,7 +4,9 @@
   "description": "Functional reactive lists styled to substitute into React's Flux architecture.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browserify": "mkdir -p dist/ && browserify index.js -x baconjs -o dist/list.js",
+    "build": "npm run browserify"
   },
   "repository": {
     "type": "git",
