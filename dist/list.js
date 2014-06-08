@@ -1,10 +1,10 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-exports.Store = require('./lib/Store');
-exports.Act = require('./lib/Act');
-exports.Publish = require('./lib/Publish');
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.fruxList=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+exports.Store = _dereq_('./lib/Store');
+exports.Act = _dereq_('./lib/Act');
+exports.Publish = _dereq_('./lib/Publish');
 
-},{"./lib/Act":2,"./lib/Publish":6,"./lib/Store":7}],2:[function(require,module,exports){
-var bacon = require('baconjs');
+},{"./lib/Act":2,"./lib/Publish":6,"./lib/Store":7}],2:[function(_dereq_,module,exports){
+var bacon = _dereq_('baconjs');
 
 var Act = function () {
     this.streams = {
@@ -35,7 +35,7 @@ Act.prototype.remove = function (key, howMany) {
 
 module.exports = Act;
 
-},{"baconjs":"wY/X68"}],3:[function(require,module,exports){
+},{"baconjs":"wY/X68"}],3:[function(_dereq_,module,exports){
 var Item = function (key, value) {
     this._key = key;
     this._value = value;
@@ -49,7 +49,7 @@ Object.defineProperty(Item.prototype, 'value', {
     get : function () { return this._value; }
 });
 
-},{}],4:[function(require,module,exports){
+},{}],4:[function(_dereq_,module,exports){
 var Iterator = function (store, key) {
     this._store = store;
     this._key = key;
@@ -79,8 +79,8 @@ Iterator.prototype.decrement = function () {
 
 module.exports = Iterator;
 
-},{}],5:[function(require,module,exports){
-var Item = require('./Item');
+},{}],5:[function(_dereq_,module,exports){
+var Item = _dereq_('./Item');
 
 var List = function () {
     this._index = {};
@@ -196,8 +196,8 @@ List.prototype.map = function (fn) {
 
 module.exports = List;
 
-},{"./Item":3}],6:[function(require,module,exports){
-var bacon = require('baconjs');
+},{"./Item":3}],6:[function(_dereq_,module,exports){
+var bacon = _dereq_('baconjs');
 
 var Publish = function (store) {
     this.store = store;
@@ -208,11 +208,11 @@ Object.defineProperty(Publish.prototype, 'items', {
     get : function () { return this.streams.items.toProperty(this.store.items); }
 });
 
-},{"baconjs":"wY/X68"}],7:[function(require,module,exports){
-var Act = require('./Act');
-var Publish = require('./Publish');
-var List = require('./List');
-var Iterator = require('./Iterator');
+},{"baconjs":"wY/X68"}],7:[function(_dereq_,module,exports){
+var Act = _dereq_('./Act');
+var Publish = _dereq_('./Publish');
+var List = _dereq_('./List');
+var Iterator = _dereq_('./Iterator');
 
 var Store = function () {
     this.act = new Act();
@@ -253,3 +253,5 @@ Store.prototype.remove = function (key, howMany) {
 module.exports = Store;
 
 },{"./Act":2,"./Iterator":4,"./List":5,"./Publish":6}]},{},[1])
+(1)
+});
