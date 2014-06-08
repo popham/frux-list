@@ -35,7 +35,7 @@ Act.prototype.remove = function (key, howMany) {
 
 module.exports = Act;
 
-},{"baconjs":"wY/X68"}],3:[function(_dereq_,module,exports){
+},{}],3:[function(_dereq_,module,exports){
 var Item = function (key, value) {
     this._key = key;
     this._value = value;
@@ -208,7 +208,7 @@ Object.defineProperty(Publish.prototype, 'items', {
     get : function () { return this.streams.items.toProperty(this.store.items); }
 });
 
-},{"baconjs":"wY/X68"}],7:[function(_dereq_,module,exports){
+},{}],7:[function(_dereq_,module,exports){
 var Act = _dereq_('./Act');
 var Publish = _dereq_('./Publish');
 var List = _dereq_('./List');

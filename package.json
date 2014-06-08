@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browserify": "mkdir -p dist/ && browserify index.js -x baconjs -s frux-list -o dist/list.js",
+    "browserify": "mkdir -p dist/ && browserify index.js --no-bundle-external -s frux-list -o dist/list.js",
     "build": "npm run browserify"
   },
   "repository": {
