@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/popham/frux-list",
   "dependencies": {
-    "baconjs": "^0.7.14"
+    "baconjs": "^0.7.14",
+    "amdefine": "^0.1.0"
   }
 }
