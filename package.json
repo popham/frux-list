@@ -2,11 +2,9 @@
   "name": "frux-list",
   "version": "0.0.0",
   "description": "Functional reactive lists styled to substitute into React's Flux architecture.",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "browserify": "mkdir -p dist/ && browserify index.js --no-bundle-external -s frux-list -o dist/frux-list.js",
-    "build": "npm run browserify"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
