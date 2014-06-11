@@ -24,9 +24,5 @@
   "bugs": {
     "url": "https://github.com/popham/frux-list/issues"
   },
-  "homepage": "https://github.com/popham/frux-list",
-  "dependencies": {
-    "baconjs": "^0.7.14",
-    "amdefine": "^0.1.0"
-  }
+  "homepage": "https://github.com/popham/frux-list"
 }
