@@ -1,0 +1,29 @@
+{
+  "name": "frux-list",
+  "version": "0.0.0",
+  "homepage": "https://github.com/popham/frux-list",
+  "authors": [
+    "Tim Popham <popham@uw.edu>"
+  ],
+  "description": "Functional reactive lists styled to substitute into React's Flux architecture.",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "frp",
+    "functional",
+    "reactive",
+    "react",
+    "reactjs",
+    "flux",
+    "javascript"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "package.json",
+    "bower.json"
+  ]
+}
