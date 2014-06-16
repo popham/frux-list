@@ -4,7 +4,8 @@
   "description": "Functional reactive lists styled to substitute into React's Flux architecture.",
   "main": "main",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p test/lib && for i in lib/*.js; do echo \"var define = require('amdefine')(module);\" > test/$i; cat $i >> test/$i; done",
+    "test": "./node_modules/.bin/mocha ./test"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/popham/frux-list/issues"
   },
-  "homepage": "https://github.com/popham/frux-list"
+  "homepage": "https://github.com/popham/frux-list",
+  "devDependencies": {
+    "amdefine": "^0.1.0",
+    "baconjs": "^0.7.14",
+    "lodash": "^2.4.1",
+    "mocha": "^1.20.1"
+  }
 }
