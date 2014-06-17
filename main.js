@@ -1,8 +1,9 @@
-define(['./lib/Store', './lib/act/index', './lib/Publish'], function (
-               Store,         act,               Publish) {
+define(['./lib/Publish', './lib/List', './lib/Store', './lib/act/index'], function (
+               Publish,         List          Store,         act) {
     return {
-        act : act,
+        List : List
+        Publish : Publish,
         Store : Store,
-        Publish : Publish
+        act : act
     };
 });
