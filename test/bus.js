@@ -10,12 +10,12 @@ describe('Appended items', function () {
             case 0:
                 count += 1;
                 assert.deepEqual([], items.values);
-                s.act.append([0,1,2,3]);
+                s.act.append.push([0,1,2,3]);
                 break;
             case 1:
                 count += 1;
                 assert.deepEqual([0,1,2,3], items.values);
-                s.act.append([10,11,12]);
+                s.act.append.push([10,11,12]);
                 break;
             case 2:
                 count += 1;
@@ -36,7 +36,7 @@ describe('Splicing items', function () {
             case 0:
                 count += 1;
                 assert.deepEqual([], items.values);
-                s.act.append([0,1,2,3]);
+                s.act.append.push([0,1,2,3]);
                 break;
             case 1:
                 count += 1;
@@ -44,7 +44,7 @@ describe('Splicing items', function () {
                 var key = items.firstKey;
                 key = items.nextKey(key);
                 key = items.nextKey(key);
-                s.act.splice(key, 1, [10,11,12]);
+                s.act.splice.push(key, 1, [10,11,12]);
                 break;
             case 2:
                 count += 1;
@@ -65,14 +65,14 @@ describe('Removing items', function () {
             case 0:
                 count += 1;
                 assert.deepEqual([], items.values);
-                s.act.append([0,1,2,3]);
+                s.act.append.push([0,1,2,3]);
                 break;
             case 1:
                 count += 1;
                 assert.deepEqual([0,1,2,3], items.values);
                 var key = items.firstKey;
                 key = items.nextKey(key);
-                s.act.remove(key, 2);
+                s.act.remove.push(key, 2);
                 break;
             case 2:
                 count += 1;
