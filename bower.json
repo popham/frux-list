@@ -1,6 +1,6 @@
 {
   "name": "frux-list",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/popham/frux-list",
   "authors": [
     "Tim Popham <popham@uw.edu>"
@@ -24,6 +24,7 @@
     "**/.*",
     "node_modules",
     "package.json",
-    "bower.json"
+    "bower.json",
+    "test"
   ]
 }
