@@ -1,4 +1,4 @@
-var bacon = require('baconjs');
+define(['baconjs'], function (bacon) {
     var Publish = function (list) {
         this._list = list;
 
@@ -10,5 +10,5 @@ var bacon = require('baconjs');
         this.stream.push(this._list._items);
     };
 
-    module.exports = Publish;
-
+    return Publish;
+});

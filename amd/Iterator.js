@@ -1,4 +1,4 @@
-
+define([], function () {
     var Iterator = function (list, key) {
         this._list = list;
         this._key = key;
@@ -38,5 +38,5 @@
         return this;
     };
 
-    module.exports = Iterator;
-
+    return Iterator;
+});

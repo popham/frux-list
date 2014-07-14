@@ -1,4 +1,4 @@
-
+define([], function() {
     var Item = function (key, value) {
         this._key = key;
         this._value = value;
@@ -12,5 +12,5 @@
         get : function () { return this._value; }
     });
 
-    module.exports = Item;
-
+    return Item;
+});

@@ -1,4 +1,4 @@
-define(['./lib/Publish', './lib/List', './lib/Store', './lib/act/index'], function (
+define(['./amd/Publish', './amd/List', './amd/Store', './amd/act/index'], function (
                Publish,         List,         Store,         act) {
     return {
         List : List,

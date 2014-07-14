@@ -1,4 +1,4 @@
-var Store = require('./lib/Store');
+var Store = require('../lib/Store');
 var assert = require('assert');
 
 describe('Appended items', function () {

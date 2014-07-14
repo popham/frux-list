@@ -25,6 +25,8 @@
     "node_modules",
     "package.json",
     "bower.json",
-    "test"
+    "test",
+    "cjs.js",
+    "lib"
   ]
 }

@@ -1,5 +1,5 @@
-var MutableList = require('./_List');
-var Iterator = require('./Iterator');
+define(['./_List', './Iterator'], function (
+     MutableList,     Iterator) {
 
     var List = function (initial) {
         initial = initial || [];
@@ -27,5 +27,5 @@ var Iterator = require('./Iterator');
         get: function () { return this.iterator(this._items.lastKey); }
     });
 
-    module.exports = List;
-
+    return List;
+});

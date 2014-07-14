@@ -1,5 +1,4 @@
-var _ = require('lodash');
-var Item = require('./Item');
+define(['lodash', './Item'], function (_, Item) {
 
     var List = function () {
         this._index = {};
@@ -129,5 +128,5 @@ var Item = require('./Item');
         return images;
     };
 
-    module.exports = List;
-
+    return List;
+});

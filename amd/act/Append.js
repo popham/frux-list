@@ -1,4 +1,4 @@
-var bacon = require('baconjs');
+define(['baconjs'], function (bacon) {
     var Act = function (list) {
         this.stream = new bacon.Bus();
         this.stream.onValue(function (o) {
@@ -12,5 +12,5 @@ var bacon = require('baconjs');
         this.stream.push({ values : values });
     };
 
-    module.exports = Act;
-
+    return Act;
+});

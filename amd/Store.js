@@ -1,6 +1,5 @@
-var act = require('./act/index');
-var Publish = require('./Publish');
-var List = require('./List');
+define(['./act/index', './Publish', './List'], function (
+           act,           Publish,     List) {
 
     var Store = function () {
         List.call(this);
@@ -17,5 +16,5 @@ var List = require('./List');
 
     Store.prototype = Object.create(List.prototype);
 
-    module.exports = Store;
-
+    return Store;
+});

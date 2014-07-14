@@ -1,19 +1,20 @@
-var bacon = require('baconjs');
+define(['baconjs'], function (bacon) {
     var Act = function (list) {
         this.stream = new bacon.Bus();
         this.stream.onValue(function (o) {
             list._items = list._items.clone();
-            list._items.remove(o.key, o.howMany);
+            list._items.splice(o.key, o.howMany, o.values);
             list.publish.push();
         }.bind(this));
     };
 
-    Act.prototype.push = function (key, howMany) {
+    Act.prototype.push = function (key, howMany, values) {
         this.stream.push({
             key : key,
-            howMany : howMany
+            howMany : howMany,
+            values : values
         });
     };
 
-    module.exports = Act;
-
+    return Act;
+});

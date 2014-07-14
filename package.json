@@ -2,9 +2,10 @@
   "name": "frux-list",
   "version": "0.0.5",
   "description": "Functional reactive lists styled to substitute into React's Flux architecture.",
-  "main": "index",
+  "main": "cjs",
   "scripts": {
-    "build": "mkdir -p test/lib && mkdir -p test/lib/act && for i in `ls lib/*.js && ls lib/*/*.js`; do echo \"var define = require('amdefine')(module);\" > test/$i; cat $i >> test/$i; done",
+    "build": "shopt -s globstar && ./node_modules/.bin/nodefy -o lib 'amd/**/*.js'",
+    "clean": "rm -r ./lib/",
     "test": "./node_modules/.bin/mocha ./test"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "amdefine": "^0.1.0",
     "baconjs": "^0.7.14",
     "lodash": "^2.4.1",
-    "mocha": "^1.20.1"
+    "mocha": "^1.20.1",
+    "nodefy": "^0.2.2"
   }
 }
