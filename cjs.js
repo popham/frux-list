@@ -1,8 +1,4 @@
-var Publish = require('./lib/Publish');
-var List = require('./lib/List');
-var Store = require('./lib/Store');
-
-exports.List = List;
-exports.Publish = Publish;
-exports.Store = Store;
-exports.act = act;
+exports.Publish = require('./lib/Publish');
+exports.List = require('./lib/List');
+exports.Store = require('./lib/Store');
+exports.act = require('./lib/act/index');
