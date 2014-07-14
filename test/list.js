@@ -112,3 +112,39 @@ describe('Item removal', function () {
         assert.deepEqual([0, 4], s.values);
     });
 });
+
+describe('Item replacement', function () {
+    it('should replace items without changing keys', function () {
+        var s = new Store();
+
+        s.act.append.push([0,1]);
+        var m1 = s.first.increment();
+        s.act.append.push([2,3]);
+        var m2 = s.first.increment().increment();
+
+        s.act.replace.push(m1.key, [5,6]);
+
+        var r1 = s.first.increment();
+        var r2 = s.first.increment().increment();
+
+        assert.strictEqual(m1.key, r1.key);
+        assert.strictEqual(m2.key, r2.key);
+        assert.strictEqual(r1.value, 5);
+        assert.strictEqual(r2.value, 6);
+    });
+
+    it('should overrun the list end', function () {
+        var s = new Store();
+
+        s.act.append.push([0,1,2]);
+        var mark = s.last;
+        s.act.replace.push(mark.key, [5,6]);
+
+        var r1 = s.first.increment().increment();
+        var r2 = s.first.increment().increment().increment();
+
+        assert.strictEqual(mark.key, r1.key);
+        assert.strictEqual(r1.value, 5);
+        assert.strictEqual(r2.value, 6);
+    });
+});
